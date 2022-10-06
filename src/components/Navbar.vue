@@ -3,8 +3,8 @@
     <v-app-bar color="#b91432" dark app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title class="text-uppercase ">
-        <span>SAI-</span>
-        <span>Board</span>
+        <span id="sai">SAI-</span>
+        <span id="sai">Board</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-menu offset-y>
@@ -45,7 +45,7 @@
           <Popup />
         </v-flex>
       </v-layout>
-      <!-- <v-list flat>
+      <v-list flat>
         <v-list-item
           v-for="link in links"
           :key="link.text"
@@ -60,43 +60,7 @@
             <v-list-item-title>{{ link.text }}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-      </v-list> -->
-
-      <v-list-item>
-        <v-list-item-icon>
-          <v-icon>mdi-home</v-icon>
-        </v-list-item-icon>
-
-        <v-list-item-title>Home</v-list-item-title>
-      </v-list-item>
-
-      <v-list-group prepend-icon="mdi-account-circle">
-        <template v-slot:activator>
-          <v-list-item-title>Survei Kepuasan Dosen</v-list-item-title>
-        </template>
-
-        <v-list-group sub-group>
-          <template v-slot:activator>
-            <v-list-item-content>
-              <v-list-item-title>EDoM</v-list-item-title>
-            </v-list-item-content>
-          </template>
-        </v-list-group>
-        <v-list-group sub-group>
-          <template v-slot:activator>
-            <v-list-item-content>
-              <v-list-item-title>EDWoM</v-list-item-title>
-            </v-list-item-content>
-          </template>
-        </v-list-group>
-        <v-list-group sub-group>
-          <template v-slot:activator>
-            <v-list-item-content>
-              <v-list-item-title>EDPoM</v-list-item-title>
-            </v-list-item-content>
-          </template>
-        </v-list-group>
-      </v-list-group>
+      </v-list>
     </v-navigation-drawer>
   </nav>
 </template>
@@ -121,7 +85,13 @@ export default {
 };
 </script>
 <style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Germania+One&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto&display=swap");
 .border {
   border-left: 4px solid #0ba518;
+}
+#sai {
+  font-family: Germania One;
+  color: #fff;
+  font-size: 25px;
 }
 </style>
